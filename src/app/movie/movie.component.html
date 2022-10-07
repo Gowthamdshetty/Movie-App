@@ -1,0 +1,11 @@
+<div>
+    <h1>Movie Search</h1>
+    Enter a movie title:
+    <input type="text" [(ngModel)]="searchText">
+    <button (click)="getMatchingTitles()">Search</button>
+    <div>
+    <ul>
+        <li class="card" *ngFor="let x of response.Search"><b>{{x.Title}}</b><br><br><img src="{{x.Poster}}" width="250" height="150"/></li>
+    </ul>
+    </div>    
+</div>
